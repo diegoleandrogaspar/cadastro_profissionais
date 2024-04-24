@@ -1,8 +1,8 @@
 package br.com.diegoleandro.api.exceptionhandler;
 
 
-import br.com.diegoleandro.api.exception.BusinessException;
-import br.com.diegoleandro.api.exception.ResourceNotFoundException;
+import br.com.diegoleandro.api.web.exception.BusinessException;
+import br.com.diegoleandro.api.web.exception.ResourceNotFoundException;
 import com.fasterxml.jackson.databind.exc.InvalidFormatException;
 import com.fasterxml.jackson.databind.exc.PropertyBindingException;
 import org.apache.commons.lang3.exception.ExceptionUtils;
