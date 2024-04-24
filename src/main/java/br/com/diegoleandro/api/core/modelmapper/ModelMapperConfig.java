@@ -1,4 +1,4 @@
-package br.com.diegoleandro.api.core;
+package br.com.diegoleandro.api.core.modelmapper;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
