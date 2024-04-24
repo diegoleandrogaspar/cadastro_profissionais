@@ -21,6 +21,7 @@ contatos N -> 1 profissionais
 
 <h3>Requisitos</h3>
 Docker instalado na máquina local
+docker run -d -p 8080:8080 diegoleandro14/desafio-simples_dental:latest
 
 <h3>Como Usar</h3>
 
