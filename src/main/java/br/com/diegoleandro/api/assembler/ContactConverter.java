@@ -2,7 +2,9 @@ package br.com.diegoleandro.api.assembler;
 
 import br.com.diegoleandro.api.controller.request.ContactRequestDTO;
 import br.com.diegoleandro.api.controller.response.ContactResponseDTO;
+import br.com.diegoleandro.api.controller.response.ProfessionalResponseDTO;
 import br.com.diegoleandro.api.entity.Contact;
+import br.com.diegoleandro.api.entity.Professional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -23,7 +25,11 @@ public class ContactConverter  implements Converter<Contact, ContactResponseDTO,
 
     @Override
     public ContactResponseDTO toDto(Contact contact) {
-        return modelMapper.map(contact, ContactResponseDTO.class);
+
+        ContactResponseDTO responseDTO = modelMapper.map(contact, ContactResponseDTO.class);
+        responseDTO.setProfissionalId(modelMapper.map(contact.getProfessionalId(), ProfessionalResponseDTO.class));
+        return responseDTO;
+
     }
 
     @Override
@@ -35,6 +41,10 @@ public class ContactConverter  implements Converter<Contact, ContactResponseDTO,
 
     @Override
     public void copyToDomainObject(ContactRequestDTO contactRequestDTO, Contact contact) {
+        //Para evitar org.hibernate.HibernateException: identifier of an instance of
+        // br.com.diegoleandro.api.entity.Contact was altered from 8 to 9
+        contact.setProfessionalId(new Professional());
+
         modelMapper.map(contactRequestDTO, contact);
     }
 }

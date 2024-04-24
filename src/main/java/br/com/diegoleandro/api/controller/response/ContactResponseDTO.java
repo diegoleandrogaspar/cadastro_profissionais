@@ -1,6 +1,7 @@
 package br.com.diegoleandro.api.controller.response;
 
 import br.com.diegoleandro.api.entity.Professional;
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,6 +17,7 @@ public class ContactResponseDTO {
     private String contato;
     private LocalDateTime createdDate;
 
-    private Long professionalId;
+    @JsonProperty("profissional_id")
+    private ProfessionalResponseDTO profissionalId;
 
 }

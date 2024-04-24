@@ -31,9 +31,8 @@ public class Contact {
     @Column(nullable = false, name = "contato", length = 30)
     private String contato;
 
-
     @Column(name = "created_date", nullable = false, columnDefinition = "TIMESTAMP")
-    private LocalDateTime createdDate;
+    private LocalDateTime createdDate = LocalDateTime.now().withNano(0);
 
     @NotNull
     @ManyToOne(fetch = FetchType.LAZY, optional = false)

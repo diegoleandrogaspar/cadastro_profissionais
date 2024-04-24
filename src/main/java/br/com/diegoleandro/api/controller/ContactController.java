@@ -8,6 +8,7 @@ import br.com.diegoleandro.api.exception.BusinessException;
 import br.com.diegoleandro.api.exception.ResourceNotFoundException;
 import br.com.diegoleandro.api.service.ContactService;
 import br.com.diegoleandro.api.specifications.ContactSpecifications;
+import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -58,12 +59,15 @@ public class ContactController {
         try {
             Contact contactActual = contactService.findByIdOrThrow(contactId);
 
-            contactConverter.copyToDomainObject(contactRequestDTO, contactActual);
+            Contact updatedContact = contactConverter.toDomainObject(contactRequestDTO);
 
-            return  contactConverter.toDto(contactService.createContact(contactActual));
-        }
-        catch (ResourceNotFoundException ex){
-            throw new BusinessException(ex.getMessage());
+            BeanUtils.copyProperties(updatedContact, contactActual, "id", "createdDate");
+
+            Contact savedContact = contactService.createContact(contactActual);
+
+            return contactConverter.toDto(savedContact);
+        } catch (ResourceNotFoundException ex) {
+            throw new BusinessException("Contato não encontrado com o ID: " + contactId);
         }
     }
 

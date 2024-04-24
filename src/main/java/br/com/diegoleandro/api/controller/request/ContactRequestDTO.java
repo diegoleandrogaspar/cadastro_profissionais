@@ -20,6 +20,6 @@ public class ContactRequestDTO {
 
     @Valid
     @NotNull
-    private ProfessionalRequestDTO professionalId;
+    private Long professionalId;
 
 }

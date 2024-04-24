@@ -35,6 +35,8 @@ public class ProfessionalConverter implements Converter<Professional, Profession
 
     @Override
     public void copyToDomainObject(ProfessionalRequestDTO professionalRequestDTO, Professional professional) {
+
+
         modelMapper.map(professionalRequestDTO, professional);
     }
 }
