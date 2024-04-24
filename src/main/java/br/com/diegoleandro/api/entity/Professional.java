@@ -34,7 +34,7 @@ public class Professional {
     private CargoEnum cargo;
 
     @NotNull
-    @Column(nullable = false, columnDefinition = "nascimento")
+    @Column(nullable = false, name = "nascimento")
     private LocalDate nascimento;
 
     @NotNull
@@ -42,5 +42,6 @@ public class Professional {
     private LocalDateTime createdDate = LocalDateTime.now().withNano(0);
 
 
-
+    public Professional(String diego, CargoEnum cargoEnum, LocalDateTime parse) {
+    }
 }

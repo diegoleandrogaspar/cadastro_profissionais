@@ -7,7 +7,7 @@ import br.com.diegoleandro.api.entity.Contact;
 import br.com.diegoleandro.api.exception.BusinessException;
 import br.com.diegoleandro.api.exception.ResourceNotFoundException;
 import br.com.diegoleandro.api.service.ContactService;
-import br.com.diegoleandro.api.specifications.ContactSpecifications;
+import br.com.diegoleandro.api.repository.specifications.ContactSpecifications;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

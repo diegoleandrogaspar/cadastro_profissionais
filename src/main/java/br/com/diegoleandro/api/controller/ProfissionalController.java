@@ -9,7 +9,7 @@ import br.com.diegoleandro.api.exception.ResourceNotFoundException;
 import br.com.diegoleandro.api.service.ProfessionalService;
 import javax.validation.Valid;
 
-import br.com.diegoleandro.api.specifications.ProfessionalSpecifications;
+import br.com.diegoleandro.api.repository.specifications.ProfessionalSpecifications;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;

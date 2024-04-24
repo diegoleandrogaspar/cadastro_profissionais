@@ -1,4 +1,4 @@
-package br.com.diegoleandro.api.specifications;
+package br.com.diegoleandro.api.repository.specifications;
 
 import br.com.diegoleandro.api.entity.Professional;
 import br.com.diegoleandro.api.entity.enums.CargoEnum;

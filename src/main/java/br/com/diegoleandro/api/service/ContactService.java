@@ -4,7 +4,7 @@ import br.com.diegoleandro.api.entity.Contact;
 import br.com.diegoleandro.api.entity.Professional;
 import br.com.diegoleandro.api.exception.ResourceNotFoundException;
 import br.com.diegoleandro.api.repository.ContactRepository;
-import br.com.diegoleandro.api.specifications.ContactSpecifications;
+import br.com.diegoleandro.api.repository.specifications.ContactSpecifications;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;

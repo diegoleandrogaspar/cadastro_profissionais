@@ -3,7 +3,7 @@ package br.com.diegoleandro.api.service;
 import br.com.diegoleandro.api.entity.Professional;
 import br.com.diegoleandro.api.exception.ResourceNotFoundException;
 import br.com.diegoleandro.api.repository.ProfessionalRepository;
-import br.com.diegoleandro.api.specifications.ProfessionalSpecifications;
+import br.com.diegoleandro.api.repository.specifications.ProfessionalSpecifications;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;

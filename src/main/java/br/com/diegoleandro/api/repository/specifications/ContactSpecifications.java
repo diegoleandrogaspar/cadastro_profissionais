@@ -1,4 +1,4 @@
-package br.com.diegoleandro.api.specifications;
+package br.com.diegoleandro.api.repository.specifications;
 
 import br.com.diegoleandro.api.entity.Contact;
 import org.apache.commons.lang3.StringUtils;
